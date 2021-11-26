@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct New_Sight_AppApp: App {
+struct NewSightApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchView()
+                .environmentObject(ContentModel())
         }
     }
 }
