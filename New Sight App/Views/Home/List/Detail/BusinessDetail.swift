@@ -51,7 +51,8 @@ struct BusinessDetail: View {
                 
                 Image("regular_\(business.reviewCount ?? 0)")
                     .padding()
-                Divider()
+                DashDivider()
+                    .padding(.horizontal)
                 HStack {
                     
                     Text("Phone")
@@ -62,7 +63,8 @@ struct BusinessDetail: View {
                 }
                 .padding()
                 
-                Divider()
+                DashDivider()
+                    .padding(.horizontal)
                 HStack {
                     Text("Website")
                         .bold()
@@ -71,9 +73,9 @@ struct BusinessDetail: View {
                     
                     Link("Visit", destination: URL(string: business.url ?? "")!)
                 }
-                .padding()
+                .padding(.horizontal)
             }
-            Divider()
+            DashDivider()
             
             
             Button {

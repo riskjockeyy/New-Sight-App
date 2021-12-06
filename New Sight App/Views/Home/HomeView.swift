@@ -21,7 +21,7 @@ struct HomeView: View {
                     HStack {
                         
                         Image(systemName: "location")
-                        Text("Waterloo")
+                        Text(model.placeMark!.locality ?? "")
                         Spacer()
                         
                         Button {
@@ -32,8 +32,11 @@ struct HomeView: View {
                     }
                     Divider()
                     
-                    BusinessList()
-                        .padding(.horizontal)
+                   
+                        BusinessList()
+                            .padding(.horizontal)
+                        
+                    
                 }
                 
             }
@@ -56,7 +59,7 @@ struct HomeView: View {
                         HStack {
                             
                             Image(systemName: "location")
-                            Text("Waterloo")
+                            Text(model.placeMark!.locality ?? "")
                             Spacer()
                             
                             Button {

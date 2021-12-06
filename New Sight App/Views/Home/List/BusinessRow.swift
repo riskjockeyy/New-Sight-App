@@ -31,8 +31,10 @@ struct BusinessRow: View {
             VStack(alignment: .leading) {
             Image("regular_\(business.rating ?? 0)")
                 Text("\(business.reviewCount ?? 0) Reviews")
+                    .font(.caption)
         }
         }
+      
         .navigationBarHidden(true)
         
         
